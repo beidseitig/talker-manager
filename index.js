@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const fs = require('fs').promises;
 const talkersList = require('./services/talkersList');
 
 const app = express();
