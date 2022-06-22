@@ -15,6 +15,7 @@ app.get('/', (_request, response) => {
 });
 
 app.use('/talker', routes.talkersRouter);
+app.use('/login', routes.loginRouter);
 app.use(middlewares.errorMiddleware);
 
 app.listen(PORT, () => {
