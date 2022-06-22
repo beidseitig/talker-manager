@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const routes = require('./routes/index');
+const middlewares = require('./middlewares/index');
 
 const app = express();
 app.use(bodyParser.json());
@@ -14,6 +15,7 @@ app.get('/', (_request, response) => {
 });
 
 app.use('/talker', routes);
+app.use(middlewares.errorMiddleware);
 
 app.listen(PORT, () => {
   console.log('Online');
