@@ -1,9 +1,3 @@
-const express = require('express');
-const services = require('../services/index');
+const talkersRouter = require('./talkersRouter');
 
-const router = express.Router();
-
-router.get('/', services.talkersList);
-router.get('/:id', services.getById);
-
-module.exports = router;
+module.exports = { talkersRouter };

@@ -14,7 +14,7 @@ app.get('/', (_request, response) => {
   response.status(HTTP_OK_STATUS).send();
 });
 
-app.use('/talker', routes);
+app.use('/talker', routes.talkersRouter);
 app.use(middlewares.errorMiddleware);
 
 app.listen(PORT, () => {
