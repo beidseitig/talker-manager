@@ -6,6 +6,7 @@ const talkersRouter = express.Router();
 
 talkersRouter.get('/', services.returnList);
 talkersRouter.get('/:id', services.getById);
+
 talkersRouter.post('/',
     validations.tokenValidation,
     validations.nameValidation,
@@ -14,5 +15,14 @@ talkersRouter.post('/',
     validations.watchedValidation,
     validations.rateValidation,
     services.addTalker);
+
+talkersRouter.put('/:id',
+    validations.tokenValidation,
+    validations.nameValidation,
+    validations.ageValidation,
+    validations.talkValidation,
+    validations.rateValidation,
+    validations.watchedValidation,
+    services.editTalker);
 
 module.exports = talkersRouter;
