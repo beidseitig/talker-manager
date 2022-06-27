@@ -1,9 +1,9 @@
 const fs = require('fs').promises;
 
-async function talkersList(req, res) {
+async function talkersList() {
     const list = await fs.readFile('./talker.json', 'utf8');
     const talkers = JSON.parse(list);
-    return res.status(200).json(talkers);
+    return talkers;
 }
 
 module.exports = talkersList;
