@@ -4,5 +4,13 @@ const getById = require('./getById');
 const generateToken = require('./generateToken');
 const addTalker = require('./addTalker');
 const editTalker = require('./editTalker');
+const deleteTalker = require('./deleteTalker');
 
-module.exports = { talkersList, getById, generateToken, addTalker, returnList, editTalker };
+module.exports = { 
+    talkersList, 
+    getById, 
+    generateToken, 
+    addTalker, 
+    returnList, 
+    editTalker, 
+    deleteTalker };

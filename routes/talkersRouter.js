@@ -25,4 +25,8 @@ talkersRouter.put('/:id',
     validations.watchedValidation,
     services.editTalker);
 
+talkersRouter.delete('/:id',
+    validations.tokenValidation,
+    services.deleteTalker);
+
 module.exports = talkersRouter;
