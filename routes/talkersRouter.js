@@ -4,7 +4,7 @@ const validations = require('../services/validations');
 
 const talkersRouter = express.Router();
 
-talkersRouter.get('/', services.talkersList);
+talkersRouter.get('/', services.returnList);
 talkersRouter.get('/:id', services.getById);
 talkersRouter.post('/',
     validations.tokenValidation,
